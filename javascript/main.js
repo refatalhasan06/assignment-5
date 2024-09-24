@@ -1,17 +1,30 @@
 
-// document.getElementById('donate-now-btn')
-//     addEventListener("click", function(){     
-//         document.getElementById('donation-section').classList.remove("hidden");
-//         document.getElementById('history-section').classList.add("hidden");
+document.getElementById('donate-now-btn')
+    .addEventListener("click", function(){     
+        document.getElementById('donation-section').classList.remove("hidden");
+        document.getElementById('history-section').classList.add("hidden");
+        
+        document.getElementById('donate-now-btn').classList.add("bg-[#B4F461]");
+        document.getElementById('donate-now-btn').classList.remove("boarder");
 
-//     });
+        document.getElementById('history-btn').classList.add("border-solid");
+        document.getElementById('history-btn').classList.add("border");
+        document.getElementById('history-btn').classList.remove("bg-[#B4F461]");
+    });
 
-// document.getElementById('history-btn')
-//     addEventListener("click", function(){  
-//         document.getElementById('history-section').classList.remove("hidden");
-//         document.getElementById('donation-section').classList.add("hidden");
+document.getElementById('history-btn')
+    .addEventListener("click", function(){  
+        document.getElementById('history-section').classList.remove("hidden");
+        document.getElementById('donation-section').classList.add("hidden");
 
-//     });
+        document.getElementById('history-btn').classList.add("bg-[#B4F461]");
+        document.getElementById('history-btn').classList.remove("boarder");
+
+        document.getElementById('donate-now-btn').classList.add("border-solid");
+        document.getElementById('donate-now-btn').classList.add("border");
+        document.getElementById('donate-now-btn').classList.remove("bg-[#B4F461]");
+
+    });
 
 document.getElementById("donatenow-noa")
     .addEventListener("click", function(event){
@@ -30,7 +43,7 @@ document.getElementById("donatenow-noa")
             const ttlDonation = parseFloat(totalDonation);
             const totalDonated = ttlDonation + noaDonation;
 
-
+            onclick = my_modal_1.showModal();
 
             document.getElementById("totalbalance").innerText =  newBalance;
             document.getElementById("total-donation-for-noa").innerText =  totalDonated;
@@ -58,7 +71,7 @@ document.getElementById("donatenow-feni")
             const ttlDonation = parseFloat(totalDonation);
             const totalDonated = ttlDonation + feniDonation;
 
-
+            onclick = my_modal_1.showModal();
 
             document.getElementById("totalbalance").innerText =  newBalance;
             document.getElementById("total-donation-for-feni").innerText =  totalDonated;
@@ -85,8 +98,8 @@ document.getElementById("donatenow-q")
             const totalDonation = document.getElementById("total-donation-for-q").innerText;
             const ttlDonation = parseFloat(totalDonation);
             const totalDonated = ttlDonation + qDonation;
-
-
+            
+            onclick = my_modal_1.showModal();
 
             document.getElementById("totalbalance").innerText =  newBalance;
             document.getElementById("total-donation-for-q").innerText =  totalDonated;
